@@ -97,6 +97,7 @@ class Taras_Contacts_IndexController extends Mage_Core_Controller_Front_Action
                 }else{
                     $tele = '';
                 }
+                $date = date('Y-m-d H:i:s');
 
 
                 $model = Mage::getModel('contacts/contacts');
@@ -104,6 +105,8 @@ class Taras_Contacts_IndexController extends Mage_Core_Controller_Front_Action
                 $model->setcontact_us_email(trim($post['email']));
                 $model->setcontact_us_phone($tele);
                 $model->setcontact_us_comment(trim($post['comment']));
+                $model->setcontact_us_date($date);
+
 
                 $model->save();
 

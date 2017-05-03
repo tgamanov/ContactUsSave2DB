@@ -27,7 +27,10 @@ if ($installer->getConnection()->isTableExists("contact_us_records") != true) {
         ), 'Phone number of the customer from contactus us form')
         ->addColumn('contact_us_comment', Varien_Db_Ddl_Table::TYPE_TEXT, 1000, array(
             'nullable' => false,
-        ), 'Comment of the customer from contactus us form');
+        ), 'Comment of the customer from contactus us form')
+    ->addColumn('contact_us_date', Varien_Db_Ddl_Table::TYPE_TIMESTAMP, 1000, array(
+        'nullable' => false,
+    ), 'Comment of the customer from contactus us form');
     $installer->getConnection()->createTable($table);
 }
 $installer->endSetup();
