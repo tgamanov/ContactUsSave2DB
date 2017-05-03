@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Taras_Contacts>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Contacts/>
+
+            </depends>
+        </Taras_Contacts>
+    </modules>
+</config>
